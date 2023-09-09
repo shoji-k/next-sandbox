@@ -1,12 +1,10 @@
-"use client";
-
-import { Admin } from "@/component/app/Admin";
-import { SessionProvider } from "next-auth/react";
+import { Admin } from "@/component/Admin";
 
 export default function AdminPage() {
   return (
-    <SessionProvider>
+    <>
+      <h1>Admin page</h1>
       <Admin />
-    </SessionProvider>
+    </>
   );
 }
