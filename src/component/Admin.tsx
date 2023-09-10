@@ -15,7 +15,7 @@ export function Admin() {
     return (
       <>
         <p>Signed in as {userEmail}</p>
-        <iframe src="/api/movies/list" />
+        <iframe src="/api/admin/movies" />
         <button onClick={() => signOut()}>Sign out</button>
         <Image
           src="https://cdn.pixabay.com/photo/2017/08/11/19/36/vw-2632486_1280.png"
@@ -30,7 +30,7 @@ export function Admin() {
   return (
     <>
       <p>Not signed in.</p>
-      <iframe src="/api/movies/list" />
+      <iframe src="/api/admin/movies" />
       <button onClick={() => signIn("github")}>Sign in</button>
     </>
   );
