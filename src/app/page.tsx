@@ -8,8 +8,11 @@ export default function Home() {
         <li>
           <Link href="/ip">Fetch</Link>
         </li>
-        <li>
+        <li className="pb-8">
           <Link href="/admin">Auth</Link>
+        </li>
+        <li>
+          <Link href="/about">About</Link>
         </li>
       </ul>
     </main>
