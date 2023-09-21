@@ -8,8 +8,11 @@ export default function Home() {
         <li>
           <Link href="/ip">Fetch</Link>
         </li>
-        <li className="pb-8">
+        <li>
           <Link href="/admin">Auth</Link>
+        </li>
+        <li className="pb-8">
+          <Link href="/react-query">React Query</Link>
         </li>
         <li>
           <Link href="/about">About</Link>
