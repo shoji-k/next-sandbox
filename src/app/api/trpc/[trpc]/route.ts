@@ -1,11 +1,14 @@
+// found code https://trpc.io/docs/server/adapters/nextjs
+
 import { appRouter } from "@/server/routers/_app";
-import * as trpcNext from "@trpc/server/adapters/next";
+import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 
-// export API handler
-// @see https://trpc.io/docs/server/adapters
-export default trpcNext.createNextApiHandler({
-  router: appRouter,
-  createContext: () => ({}),
-});
+const handler = (req: Request) =>
+  fetchRequestHandler({
+    endpoint: "/api/trpc",
+    req,
+    router: appRouter,
+    createContext: () => ({}),
+  });
 
-// TODO: fix this
+export { handler as GET, handler as POST };
